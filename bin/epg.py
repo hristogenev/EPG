@@ -27,6 +27,10 @@ def get_map():
   return streams_map
 
 def get_ids():
+
+  channels = []
+  ids = []
+
   try:
     r = requests.get("http://megaepg.kodibg.org/stats/bedroom/channels.json?cachebuster=%s" % randint(0, 10000))
     channels = r.json()
@@ -41,7 +45,6 @@ def get_ids():
     except: 
       log("No channels.json file loaded")
       
-  ids = []
   for c in channels:
     if c["id"] not in ids:
       ids.append(c["id"])
