@@ -8,7 +8,7 @@
   },
   "logging": true,
   "timespan": {
-    "days": 3
+    "days": 2
   },
   "skip": "noskip",
   "update": "",
