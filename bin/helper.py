@@ -8,9 +8,10 @@ sys.setdefaultencoding('utf-8')
 
 bindir         = os.path.dirname(os.path.realpath(__file__))
 gitdir         = os.path.join(bindir, "..")
-logfile        = os.path.join(gitdir, "logs", "log.txt")
-wglogfile      = os.path.join(gitdir, "logs", "run.log.txt")
+logdir         = os.path.join(gitdir, "logs")
 configdir      = os.path.join(gitdir, "config")
+logfile        = os.path.join(logdir, "log.txt")
+wglogfile      = os.path.join(logdir, "run.log.txt")
 wgpath         = os.environ.get("wgpath")
 wgmulti        = os.path.join(wgpath, "wgmulti.exe")
 wgmulti        = "wgmulti.exe"
@@ -18,6 +19,9 @@ epg_file       = os.path.join(configdir, "epg.xml")
 final_epg_file = os.path.join(gitdir, "epg.xml")
 commitEnabled  = True
 
+if not os.path.exists(logdir):
+  os.makedirs(logdir)
+    
 if os.path.isfile(logfile):
   os.remove(logfile)
 sys.stdout = open(logfile, "w")
