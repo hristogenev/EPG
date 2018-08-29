@@ -1,3 +1,3 @@
 @echo off
 
-python D:\Git\EPG\bin\run.py
+python C:\Git\EPG\bin\run.py
