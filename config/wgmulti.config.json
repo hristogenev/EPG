@@ -12668,16 +12668,16 @@
     {
       "siteinis": [
         {
+          "site_id": "4403",
+          "name": "dnes.bg"
+        },
+        {
           "site_id": "btv-action",
           "name": "btv.bg"
         },
         {
           "site_id": "bTVAction.bg",
           "name": "BGBasic"
-        },
-        {
-          "site_id": "4403",
-          "name": "dnes.bg"
         },
         {
           "site_id": "4##BBTA",
